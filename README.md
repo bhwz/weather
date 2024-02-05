@@ -1,2 +1,3 @@
-# weather
-Sunny days
+# Weather
+
+A web based weather visualization app.
