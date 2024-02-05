@@ -8,10 +8,13 @@ servers:
 paths:
   /:
     get:
-      description: Status
+      summary: Query the service status.
+      description: Use this endpoint to retrieve information about the health of the service.
+      tags:
+        - Meta
       responses:
         200:
-          description: Returns status of service health.
+          description: The service is healthy.
           content:
             application/json:
               schema:
@@ -20,4 +23,5 @@ paths:
                   status:
                     type: string
                     example: "OK"
-  
+        500:
+          description: The service is experiencing a critical error.
